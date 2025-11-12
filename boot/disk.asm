@@ -31,8 +31,8 @@ disk_error:
     mov bx, DISK_ERROR
     call print
     call print_nl
-    mov dh, ah ; ah = error code, dl = disk drive that dropped the error
-    call print_hex ; check out the code at http://stanislavs.org/helppc/int_13-1.html
+    mov dh, ah
+    call print_hex
     jmp disk_loop
 
 sectors_error:
